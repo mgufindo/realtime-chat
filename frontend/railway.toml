@@ -1,9 +1,12 @@
 [build]
-builder = "node"
+builder = "nixpacks"
+
+[build.args]
+NODE_VERSION = "18"
 
 [deploy]
 startCommand = "node .output/server/index.mjs"
 
 [[services]]
 name = "web"
-httpPort = 3000
+httpPort = 3010

@@ -1,9 +1,11 @@
 [build]
-builder = "heroku/buildpacks:20"
+builder = "nixpacks"
+
+[build.args]
+RUBY_VERSION = "3.2.2"
 
 [deploy]
 startCommand = "bundle exec rails s -p $PORT"
-releaseCommand = "rails db:migrate"
 
 [[services]]
 name = "web"
