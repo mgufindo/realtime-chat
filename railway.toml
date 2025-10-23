@@ -1,0 +1,12 @@
+[build]
+builder = "nixpacks"
+
+[build.args]
+NIXPACKS_BUILD_CMD = "bash build.sh"
+
+[deploy]
+startCommand = "bash start.sh"
+
+[[services]]
+name = "web"
+run = "bash start.sh"
