@@ -1,0 +1,10 @@
+[build]
+builder = "heroku/buildpacks:20"
+
+[deploy]
+startCommand = "bundle exec rails s -p $PORT"
+releaseCommand = "rails db:migrate"
+
+[[services]]
+name = "web"
+httpPort = 3000

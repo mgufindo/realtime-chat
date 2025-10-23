@@ -1,0 +1,9 @@
+[build]
+builder = "node"
+
+[deploy]
+startCommand = "node .output/server/index.mjs"
+
+[[services]]
+name = "web"
+httpPort = 3000

@@ -1,9 +1,0 @@
-[build]
-builder = "nixpacks"
-
-[build.args]
-RAILS_ENV = "production"
-
-[deploy]
-startCommand = "bundle exec rails s -p $PORT"
-releaseCommand = "rails db:migrate"
