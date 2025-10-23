@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  input,
+  select,
+  textarea {
+    @apply block w-full !px-3 !py-2 bg-white border !border-slate-300 !rounded-md text-sm !shadow-sm !placeholder-slate-400 focus:outline-none focus:!border-light-blue focus:!ring-1 focus:!ring-light-blue disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none hover:border-light-blue;
+  }
+
+  input[type="checkbox"] {
+    @apply md:!min-w-fit
+  }
+
+  .checkbox {
+    --chkbg: #126FF7 !important
+  }
+
+  .invalid {
+    @apply !border-red-secondary !ring-red-secondary;
+  }
+  select {
+    @apply !appearance-none !pr-4;
+  }
+
+  label {
+    @apply text-sm font-semibold;
+  }
+
+  .text-base {
+    @apply text-[#106FF6];
+  }
+
+  .btn-base {
+    @apply flex px-4 py-2 rounded-md text-sm font-medium cursor-pointer items-center;
+  }
+
+  .btn-base-primary {
+    @apply bg-secondary text-white hover:bg-secondary;
+  }
+  .btn-base-warning {
+    @apply bg-kuning text-white hover:bg-kuning;
+  }
+  .btn-base-danger {
+    @apply bg-red-600 text-white hover:bg-red-600;
+  }
+
+  .btn-base-secondary {
+    @apply bg-light-blue text-dark-primary;
+  }
+
+  .btn-base-default {
+    @apply bg-transparent text-abu bg-disable border-abu;
+  }
+
+  /* VUE MULTISELECT */
+  .multiselect__content_static .multiselect__content-wrapper {
+    @apply !static;
+  }
+
+  .multiselect__tags-wrap {
+    @apply !border-none !border-0 !border-transparent ring-0;
+  }
+
+  .multiselect__input {
+    @apply !bg-white !border-none;
+  }
+
+  .multiselect__tags {
+    @apply !bg-white;
+  }
+
+  .multiselect__single {
+    @apply !bg-transparent !shadow-none
+  }
+
+  .multiselect__tags input {
+    @apply !py-0
+  }
+ .multiselect--active .multiselect__tags input {
+    @apply !py-2
+  }
+
+  .multiselect__option--highlight,
+  .multiselect__option--selected {
+    @apply !bg-secondary !text-white;
+  }
+
+  /* END VUE MULTISELECT */
+}
