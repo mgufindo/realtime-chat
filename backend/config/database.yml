@@ -1,20 +1,19 @@
 default: &default
-  adapter: mysql2
-  encoding: utf8mb4
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root # Sesuaikan
-  password: 123456 # Sesuaikan dengan password MariaDB
-  host: localhost
-  port: 3306
+  timeout: 5000
 
 development:
   <<: *default
-  database: chat_app_development
+  adapter: sqlite3
+  database: storage/development.sqlite3
 
 test:
   <<: *default
-  database: chat_app_test
+  adapter: sqlite3
+  database: storage/test.sqlite3
 
 production:
   <<: *default
-  database: chat_app_production
+  url: <%= ENV['DATABASE_URL'] %>
